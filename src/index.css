@@ -1,13 +1,27 @@
+@font-face {
+  font-family: "Christmas";
+  src: url("./fonts/OneStarryNight-lp45.ttf");
+}
+.App {
+  background-color: aqua;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
 body {
+  font-size: 1em;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root > h1 {
+  font-family: "Christmas", Arial, Helvetica, sans-serif;
+  font-size: 10em;
+  font-weight: 1000;
+  text-align: center;
 }

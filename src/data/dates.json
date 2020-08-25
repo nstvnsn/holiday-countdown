@@ -1,0 +1,59 @@
+{
+  "SECULAR": {
+    "static": {
+      "halloween": {
+        "name": "Halloween",
+        "date": "10/31"
+      },
+      "internationalDayOfPeace": {
+        "name": "International Day of Peace",
+        "date": "9/21"
+      },
+      "internationalMensDay": {
+        "name": "International Men's Day",
+        "date": "11/19"
+      },
+      "internationalWomensDay": {
+        "name": "International Women's Day",
+        "date": "3/8"
+      },
+      "internationalWorkersDay": {
+        "name": "International Worker's Day",
+        "date": "5/1"
+      },
+      "saintPatricksDay": {
+        "name": "Saint Patrick's Day",
+        "date": "3/17"
+      },
+      "valentinesDay": {
+        "name": "Saint Patrick's Day",
+        "date": "2/14"
+      }
+    },
+    "dynamic": {
+      "labourDay": {
+        "name": "Labour Day",
+        "date": "FIRST MONDAY IN SEPTEMBER"
+      },
+      "thanksgiving": {
+        "name": "Thanksgiving Day",
+        "date": {
+          "us": "FOURTH THURSDAY IN NOVEMBER",
+          "canada": "SECOND MONDAY IN OCTOBER"
+        }
+      }
+    }
+  },
+  "PAGAN": {
+    "static": {},
+    "dynamic": {}
+  },
+  "CHRISTIAN": {
+    "static": {},
+    "dynamic": {}
+  },
+  "HINDU": {
+    "static": {},
+    "dynamic": {}
+  }
+}
