@@ -1,13 +1,30 @@
 import React, { useEffect, useState } from "react";
 
-function HolidaySelectPane() {
-  let [religionSelection, setReligionSelection] = useState("");
-  let [holidaySelection, setHolidaySelection] = useState("");
-  let [region, setRegion] = useState("");
+import BeliefGroup from "../components/beliefGroup";
+import holidayDates from "../data/dates.json";
 
-  useEffect(() => {});
+function HolidaySelectPane(props) {
+  let [activeHoliday, setActiveHoliday] = useState(props.activeHoliday);
+  let [groupList, setGroupList] = useState([]);
 
-  return <div className="holidaySelectPane"></div>;
+  useEffect(() => {
+    let listOfKeys = Object.keys(holidayDates);
+    setGroupList(
+      listOfKeys.map((key, i) => {
+        return (
+          <li key={i}>
+            <BeliefGroup belief={key} />
+          </li>
+        );
+      })
+    );
+  }, [activeHoliday]);
+
+  return (
+    <div className="holidaySelectPane">
+      <ul>{groupList}</ul>
+    </div>
+  );
 }
 
 export default HolidaySelectPane;

@@ -1,38 +1,55 @@
-.App {
+@font-face {
+  font-family: "Christmas";
+  src: url("./fonts/OneStarryNight-lp45.ttf");
+}
+
+.App-Header {
+  background-color: rgb(63, 63, 71);
+  font-family: "Christmas", Arial, Helvetica, sans-serif;
+  font-size: 10em;
+  font-weight: 1000;
   text-align: center;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App {
+  background-color: rgb(165, 219, 219);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+  width: 80%;
 }
 
-.App-link {
-  color: #61dafb;
+.beliefGroup > ul {
+  list-style-type: "";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.holidaySelectPane > ul {
+  list-style-type: "+";
+}
+
+.countdownTimer {
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.countdownTimer > span > p:nth-child(1) {
+  font-size: 4.5rem;
+}
+
+.holidaySelectPane {
+  background-color: rgba(0, 0, 255, 0.295);
+  height: auto;
+  position: relative;
+  width: 15rem;
+}
+
+.main {
+  width: 50vw;
 }

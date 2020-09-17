@@ -7,12 +7,12 @@ import HolidaySelectPane from "./components/holidaySelectPane.js";
 function App() {
   return (
     <div className="App">
-      <header className="App-Header">Holiday Countdown</header>
       <div className="holidaySelectPane">
-        <HolidaySelectPane />
+        <HolidaySelectPane activeHoliday="samhain" />
       </div>
       <div className="main">
-        <DateTimeClock />
+        <h1 className="App-Header">Holiday Countdown</h1>
+        <DateTimeClock holiday="samhain" />
       </div>
       <footer className="App-Footer"></footer>
     </div>

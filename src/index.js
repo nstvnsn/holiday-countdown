@@ -6,7 +6,6 @@ import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Holiday Countdown</h1>
     <App />
   </React.StrictMode>,
   document.getElementById("root")
