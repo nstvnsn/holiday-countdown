@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/holiday-countdown/static/css/main.8514891c.chunk.css",
+    "main.js": "/holiday-countdown/static/js/main.7ecaa533.chunk.js",
+    "main.js.map": "/holiday-countdown/static/js/main.7ecaa533.chunk.js.map",
+    "runtime-main.js": "/holiday-countdown/static/js/runtime-main.a1a76005.js",
+    "runtime-main.js.map": "/holiday-countdown/static/js/runtime-main.a1a76005.js.map",
+    "static/js/2.9fa7aa8a.chunk.js": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js",
+    "static/js/2.9fa7aa8a.chunk.js.map": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js.map",
+    "index.html": "/holiday-countdown/index.html",
+    "precache-manifest.93b128136244661a127e7e2d57a72ff4.js": "/holiday-countdown/precache-manifest.93b128136244661a127e7e2d57a72ff4.js",
+    "service-worker.js": "/holiday-countdown/service-worker.js",
+    "static/css/main.8514891c.chunk.css.map": "/holiday-countdown/static/css/main.8514891c.chunk.css.map",
+    "static/js/2.9fa7aa8a.chunk.js.LICENSE.txt": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/holiday-countdown/static/media/OneStarryNight-lp45.4525d06f.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1a76005.js",
+    "static/js/2.9fa7aa8a.chunk.js",
+    "static/css/main.8514891c.chunk.css",
+    "static/js/main.7ecaa533.chunk.js"
+  ]
+}
