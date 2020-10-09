@@ -1,30 +1,41 @@
 import React, { useEffect, useState } from "react";
-
 import BeliefGroup from "../components/beliefGroup";
 import holidayDates from "../data/dates.json";
 
 function HolidaySelectPane(props) {
-  let [activeHoliday, setActiveHoliday] = useState(props.activeHoliday);
   let [groupList, setGroupList] = useState([]);
 
   useEffect(() => {
     let listOfKeys = Object.keys(holidayDates);
+
     setGroupList(
       listOfKeys.map((key, i) => {
-        return (
-          <li key={i}>
-            <BeliefGroup belief={key} />
-          </li>
-        );
+        let listItem;
+        if (props.belief === key) {
+          listItem = (
+            <BeliefGroup
+              active={true}
+              holiday={props.holiday}
+              belief={key}
+              key={i}
+            />
+          );
+        } else {
+          listItem = (
+            <BeliefGroup
+              active={false}
+              holiday={props.holiday}
+              belief={key}
+              key={i}
+            />
+          );
+        }
+        return listItem;
       })
     );
-  }, [activeHoliday]);
+  }, [props.belief, props.holiday]);
 
-  return (
-    <div className="holidaySelectPane">
-      <ul>{groupList}</ul>
-    </div>
-  );
+  return <ul className="holidaySelectPane">{groupList}</ul>;
 }
 
 export default HolidaySelectPane;

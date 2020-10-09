@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import moment from "moment";
 
-let currYear = new Date().getFullYear();
+import holidayDates from "../data/dates.json";
 
 function DateTimeClock(props) {
-  let [holiday, setHoliday] = useState(new Date(`12/25/${currYear}`));
-  let [timeRemaining, setTimeRemaining] = useState(holiday - new Date());
-  let [effectTimeout, setEffectTimeout] = useState(0);
+  let [holiDate, setHoliDate] = useState(0);
+  let [timeRemaining, setTimeRemaining] = useState(0);
   let [timeUnits, setTimeUnits] = useState({
     days: 0,
     hours: 0,
@@ -14,19 +12,24 @@ function DateTimeClock(props) {
     seconds: 0,
   });
 
-  useEffect(calcTime, [timeRemaining]);
+  useEffect(() => {
+    let date, dateObj;
+
+    date = holidayDates[props.belief][props.holiday].date;
+    date += "/" + new Date().getFullYear();
+    dateObj = new Date(date);
+    setHoliDate(dateObj);
+  }, [props.belief, props.holiday]);
 
   useEffect(() => {
-    if (!effectTimeout) {
-      setEffectTimeout(
-        setTimeout(() => {
-          const newDate = new Date();
-          setTimeRemaining(holiday - newDate);
-          setEffectTimeout(0);
-        }, 1000)
-      );
-    } // eslint-disable-next-line
-  }, [timeUnits]);
+    let clockTick = setInterval(() => {
+      let newDate = new Date();
+      setTimeRemaining(holiDate - newDate);
+    }, 1000);
+    return () => clearInterval(clockTick);
+  }, [holiDate]);
+
+  useEffect(calcTime, [timeRemaining]);
 
   function calcTime() {
     let timeInSec = {
@@ -48,6 +51,7 @@ function DateTimeClock(props) {
     secondsRemaining -= Math.floor(timeInSec.minute * minutes);
 
     seconds = Math.floor(secondsRemaining);
+
     setTimeUnits({ days, hours, minutes, seconds });
   }
 
