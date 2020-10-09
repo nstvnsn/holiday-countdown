@@ -25,7 +25,14 @@ function DateTimeClock(props) {
 
   useEffect(() => {
     let clockTick = setInterval(() => {
-      let newDate = new Date();
+      let newDate, timeRemain;
+      newDate = new Date();
+      timeRemain = holiDate - newDate;
+      if (timeRemain < 0) {
+        let tDate = holiDate;
+        tDate.setFullYear(holiDate.getFullYear() + 1);
+        setHoliDate(tDate);
+      }
       setTimeRemaining(holiDate - newDate);
     }, 1000);
     return () => clearInterval(clockTick);
