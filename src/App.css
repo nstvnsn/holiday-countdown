@@ -30,44 +30,6 @@ h2.App-Header {
   width: 80%;
 }
 
-.beliefGroup {
-  list-style-type: "+";
-}
-
-.beliefGroup > ul {
-  display: none;
-}
-
-.beliefGroup-Active {
-  list-style-type: "-";
-}
-
-.beliefGroup-Active > ul {
-  list-style-type: " ";
-}
-
-.countdownTimer {
-  background-color: red;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.countdownTimer > span > p:nth-child(1) {
-  font-size: 4.5rem;
-}
-
-.holidaySelectPane {
-  background-color: rgba(0, 0, 255, 0.295);
-  height: auto;
-  position: relative;
-  width: 15rem;
-}
-
-.listOfBeliefGroups {
-  list-style-type: "+";
-}
-
 .main {
   width: 50vw;
 }

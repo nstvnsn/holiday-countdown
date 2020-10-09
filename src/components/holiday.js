@@ -1,23 +1,43 @@
 import React, { useEffect, useState } from "react";
 
+import "../css/holiday.css";
+
 function Holiday(props) {
   let [listItem, setListItem] = useState();
 
   useEffect(() => {
     if (props.active) {
       setListItem(
-        <li key={props.id} style={{ backgroundColor: "green" }}>
+        <div
+          key={props.id}
+          className="holidayEntry-Active"
+          onClick={holidayEntryClicked}
+        >
           {props.holidayTitle}
-        </li>
+        </div>
       );
     } else {
       setListItem(
-        <li key={props.id} style={{ backgroundColor: "clear" }}>
+        <div
+          key={props.id}
+          className="holidayEntry"
+          onClick={holidayEntryClicked}
+        >
           {props.holidayTitle}
-        </li>
+        </div>
       );
     }
-  }, [props.active, props.holidayTitle, props.id]);
+    function holidayEntryClicked(e) {
+      props.eventHandlers.holidayChange(props.belief, props.holidayID);
+    }
+  }, [
+    props.active,
+    props.belief,
+    props.eventHandlers,
+    props.holidayID,
+    props.holidayTitle,
+    props.id,
+  ]);
 
   return [listItem];
 }

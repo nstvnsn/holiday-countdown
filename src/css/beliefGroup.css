@@ -1,0 +1,15 @@
+.beliefGroup {
+  list-style-type: "+";
+}
+
+.beliefGroup > ul {
+  display: none;
+}
+
+.beliefGroup-Active {
+  list-style-type: "-";
+}
+
+.beliefGroup-Active > ul {
+  list-style-type: " ";
+}

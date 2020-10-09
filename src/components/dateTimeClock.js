@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 import holidayDates from "../data/dates.json";
 
+import "../css/dateTimeClock.css";
+
 function DateTimeClock(props) {
   let [holiDate, setHoliDate] = useState(0);
   let [timeRemaining, setTimeRemaining] = useState(0);

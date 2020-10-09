@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 
-import DateTimeClock from "./components/DateTimeClock";
+import DateTimeClock from "./components/dateTimeClock.js";
 import HolidaySelectPane from "./components/holidaySelectPane.js";
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
   let [holiday, setHoliday] = useState("samhain");
   useEffect(() => {}, []);
 
-  function handleHolidayChange(e, holiday) {
-    console.log(e);
-    console.log(holiday);
+  function handleHolidayChange(newBelief, newHoliday) {
+    setBelief(newBelief);
+    setHoliday(newHoliday);
   }
 
   return (
@@ -21,7 +21,7 @@ function App() {
       <HolidaySelectPane
         belief={belief}
         holiday={holiday}
-        onHolidayChange={handleHolidayChange}
+        eventHandlers={{ holidayChange: handleHolidayChange }}
       />
       <div className="main">
         <h1 className="App-Header">Days Until:</h1>
