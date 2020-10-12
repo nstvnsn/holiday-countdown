@@ -13,3 +13,23 @@
 .beliefGroup-Active > ul {
   list-style-type: " ";
 }
+
+.beliefGroup,
+.beliefGroup-Active {
+  font-size: 1.2em;
+  height: auto;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.beliefGroup > span,
+.beliefGroup-Active > span {
+  font-size: 1.3em;
+  font-weight: 400;
+  pointer-events: none;
+}
+
+.beliefGroup:hover,
+.beliefGroup-Active:hover {
+  cursor: pointer;
+}

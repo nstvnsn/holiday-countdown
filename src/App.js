@@ -4,6 +4,8 @@ import "./App.css";
 import DateTimeClock from "./components/dateTimeClock.js";
 import HolidaySelectPane from "./components/holidaySelectPane.js";
 
+import dates from "./data/dates.json";
+
 function App() {
   // eslint-disable-next-line
   let [belief, setBelief] = useState("PAGAN");
@@ -18,11 +20,13 @@ function App() {
 
   return (
     <div className="App">
-      <HolidaySelectPane
-        belief={belief}
-        holiday={holiday}
-        eventHandlers={{ holidayChange: handleHolidayChange }}
-      />
+      <div className="holidaySelectPaneWrapper">
+        <HolidaySelectPane
+          belief={belief}
+          holiday={holiday}
+          eventHandlers={{ holidayChange: handleHolidayChange }}
+        />
+      </div>
       <div className="main">
         <h1 className="App-Header">Days Until:</h1>
         <h2 className="App-Header">

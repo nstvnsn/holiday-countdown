@@ -6,40 +6,24 @@ import holidayDates from "../data/dates.json";
 import "../css/holidaySelectPane.css";
 
 function HolidaySelectPane(props) {
-  let [groupList, setGroupList] = useState([]);
+  let [beliefGroupList, setBeliefGroupList] = useState([]);
 
   useEffect(() => {
-    let listOfKeys = Object.keys(holidayDates);
+    let listOfBeliefs = Object.keys(holidayDates);
 
-    setGroupList(
-      listOfKeys.map((key, i) => {
-        let listItem;
-        if (props.belief === key) {
-          listItem = (
-            <BeliefGroup
-              active={true}
-              holiday={props.holiday}
-              belief={key}
-              key={i}
-              eventHandlers={{
-                holidayChange: props.eventHandlers.holidayChange,
-              }}
-            />
-          );
-        } else {
-          listItem = (
-            <BeliefGroup
-              active={false}
-              holiday={props.holiday}
-              belief={key}
-              key={i}
-              eventHandlers={{
-                holidayChange: props.eventHandlers.holidayChange,
-              }}
-            />
-          );
-        }
-        return listItem;
+    setBeliefGroupList(
+      listOfBeliefs.map((key, i) => {
+        return (
+          <BeliefGroup
+            active={false}
+            holiday={props.holiday}
+            belief={key}
+            key={i}
+            eventHandlers={{
+              holidayChange: props.eventHandlers.holidayChange,
+            }}
+          />
+        );
       })
     );
   }, [props.belief, props.holiday, props.eventHandlers.holidayChange]);
@@ -58,7 +42,7 @@ function HolidaySelectPane(props) {
 
   return (
     <ul className="holidaySelectPane" onClick={beliefGroupClicked}>
-      {groupList}
+      {beliefGroupList}
     </ul>
   );
 }

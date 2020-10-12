@@ -35,7 +35,7 @@ function BeliefGroup(props) {
           );
         } else {
           holidayComponent = (
-            <li key={i}>
+            <li key={i} className="holidayListItem">
               <Holiday
                 id={i}
                 belief={props.belief}
@@ -63,14 +63,14 @@ function BeliefGroup(props) {
     return (
       <li className="beliefGroup-Active">
         <span>{props.belief}</span>
-        <ul>{holidayList}</ul>
+        <ul className="holidayList">{holidayList}</ul>
       </li>
     );
   } else {
     return (
       <li className="beliefGroup">
         <span>{props.belief}</span>
-        <ul>{holidayList}</ul>
+        <ul className="holidayList">{holidayList}</ul>
       </li>
     );
   }
