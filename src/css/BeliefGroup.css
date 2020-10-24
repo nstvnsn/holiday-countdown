@@ -1,5 +1,6 @@
 .beliefGroup {
   list-style-type: "+";
+  padding: 0;
 }
 
 .beliefGroup > ul {
@@ -11,7 +12,7 @@
 }
 
 .beliefGroup-Active > ul {
-  list-style-type: " ";
+  list-style-type: "";
 }
 
 .beliefGroup,

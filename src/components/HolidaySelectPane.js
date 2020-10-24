@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 
 import BeliefGroup from "../components/BeliefGroup";
-import holidayDates from "../data/dates.json";
 
+import holidayData from "../data/dates.json";
 import "../css/HolidaySelectPane.css";
 
 function HolidaySelectPane(props) {
   const [beliefGroupList, setBeliefGroupList] = useState([]);
 
   useEffect(() => {
-    let listOfBeliefs = Object.keys(holidayDates);
+    let listOfBeliefs = Object.keys(holidayData);
 
     setBeliefGroupList(
       listOfBeliefs.map((key, i) => {

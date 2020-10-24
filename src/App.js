@@ -1,14 +1,14 @@
 import React, { useState } from "react";
+
+import DateTimeClock from "./components/DateTimeClock";
+import HolidaySelectPane from "./components/HolidaySelectPane";
+import HolidayTitle from "./components/HolidayTitle";
+
 import "./App.css";
 
-import DateTimeClock from "./components/DateTimeClock.js";
-import HolidaySelectPane from "./components/HolidaySelectPane.js";
-
 function App() {
-  // eslint-disable-next-line
-  let [belief, setBelief] = useState("PAGAN");
-  // eslint-disable-next-line
-  let [holiday, setHoliday] = useState("samhain");
+  const [belief, setBelief] = useState("PAGAN");
+  const [holiday, setHoliday] = useState("samhain");
 
   function handleHolidayChange(newBelief, newHoliday) {
     setBelief(newBelief);
@@ -25,9 +25,9 @@ function App() {
         />
       </div>
       <div className="main">
-        <h1 className="App-Header">Days Until:</h1>
-        <h2 className="App-Header">
-          {holiday[0].toUpperCase() + holiday.slice(1)}
+        <h1 className="App-Header">Countdown:</h1>
+        <h2 className="holidayTitle">
+          <HolidayTitle belief={belief} holiday={holiday} />
         </h2>
         <DateTimeClock belief={belief} holiday={holiday} />
       </div>

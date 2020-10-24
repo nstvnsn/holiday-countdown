@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import holidayDates from "../data/dates.json";
-
-import "../css/DateTimeClock.css";
 import TimeUnit from "../components/TimeUnit";
 
+import holidayData from "../data/dates.json";
+import "../css/DateTimeClock.css";
+
 function DateTimeClock(props) {
-  let [timeUnits, setTimeUnits] = useState({
+  const [timeUnits, setTimeUnits] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -56,7 +56,7 @@ function DateTimeClock(props) {
 
     function getHolidayDate() {
       const hDate = new Date(
-        holidayDates[props.belief][props.holiday].date +
+        holidayData[props.belief][props.holiday].date +
           "/" +
           new Date().getFullYear()
       );

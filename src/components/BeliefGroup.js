@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-import holidayDates from "../data/dates.json";
-import Holiday from "./Holiday.js";
+import Holiday from "./Holiday";
 
+import holidayData from "../data/dates.json";
 import "../css/BeliefGroup.css";
 
 function BeliefGroup(props) {
-  let [holidayList, setHolidayList] = useState([]);
-  let [active, setActive] = useState(false);
+  const [active, setActive] = useState(false);
+  const [holidayList, setHolidayList] = useState([]);
 
   useEffect(() => {
-    let listOfKeys = Object.keys(holidayDates[props.belief]);
-
+    let listOfKeys = Object.keys(holidayData[props.belief]);
     let nameTitleList = listOfKeys.map((key) => {
-      return [key, holidayDates[props.belief][key].name];
+      return [key, holidayData[props.belief][key].name];
     });
 
     setHolidayList(
@@ -47,10 +46,14 @@ function BeliefGroup(props) {
       className={(active && "beliefGroup-Active") || "beliefGroup"}
       onClick={(e) => beliefGroupClickHandler(e)}
     >
-      <span className="beliefGroupTitle" style={{ cursor: "pointer" }}>
+      <span className="beliefGroupTitle" id="holidayIDList">
         {props.belief}
       </span>
-      <ul className="holidayList" style={{ cursor: "default" }}>
+      <ul
+        aria-labelledby="holidayIDList"
+        className="holidayList"
+        style={{ cursor: "default" }}
+      >
         {holidayList}
       </ul>
     </li>
