@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/holiday-countdown/static/css/main.358fcba4.chunk.css",
-    "main.js": "/holiday-countdown/static/js/main.f400247b.chunk.js",
-    "main.js.map": "/holiday-countdown/static/js/main.f400247b.chunk.js.map",
+    "main.css": "/holiday-countdown/static/css/main.1c0d737c.chunk.css",
+    "main.js": "/holiday-countdown/static/js/main.d45914e5.chunk.js",
+    "main.js.map": "/holiday-countdown/static/js/main.d45914e5.chunk.js.map",
     "runtime-main.js": "/holiday-countdown/static/js/runtime-main.a1a76005.js",
     "runtime-main.js.map": "/holiday-countdown/static/js/runtime-main.a1a76005.js.map",
     "static/js/2.9fa7aa8a.chunk.js": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js",
     "static/js/2.9fa7aa8a.chunk.js.map": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js.map",
     "index.html": "/holiday-countdown/index.html",
-    "precache-manifest.977f6de7812d189ee519634632d19b51.js": "/holiday-countdown/precache-manifest.977f6de7812d189ee519634632d19b51.js",
+    "precache-manifest.54dfc633df96753ddba33905afecad60.js": "/holiday-countdown/precache-manifest.54dfc633df96753ddba33905afecad60.js",
     "service-worker.js": "/holiday-countdown/service-worker.js",
-    "static/css/main.358fcba4.chunk.css.map": "/holiday-countdown/static/css/main.358fcba4.chunk.css.map",
+    "static/css/main.1c0d737c.chunk.css.map": "/holiday-countdown/static/css/main.1c0d737c.chunk.css.map",
     "static/js/2.9fa7aa8a.chunk.js.LICENSE.txt": "/holiday-countdown/static/js/2.9fa7aa8a.chunk.js.LICENSE.txt",
     "static/media/App.css": "/holiday-countdown/static/media/OneStarryNight-lp45.4525d06f.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.a1a76005.js",
     "static/js/2.9fa7aa8a.chunk.js",
-    "static/css/main.358fcba4.chunk.css",
-    "static/js/main.f400247b.chunk.js"
+    "static/css/main.1c0d737c.chunk.css",
+    "static/js/main.d45914e5.chunk.js"
   ]
 }
