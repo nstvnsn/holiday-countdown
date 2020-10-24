@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-import DateTimeClock from "./components/dateTimeClock.js";
-import HolidaySelectPane from "./components/holidaySelectPane.js";
-
-import dates from "./data/dates.json";
+import DateTimeClock from "./components/DateTimeClock.js";
+import HolidaySelectPane from "./components/HolidaySelectPane.js";
 
 function App() {
   // eslint-disable-next-line
   let [belief, setBelief] = useState("PAGAN");
   // eslint-disable-next-line
   let [holiday, setHoliday] = useState("samhain");
-  useEffect(() => {}, []);
 
   function handleHolidayChange(newBelief, newHoliday) {
     setBelief(newBelief);

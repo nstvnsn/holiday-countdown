@@ -33,3 +33,10 @@
 .beliefGroup-Active:hover {
   cursor: pointer;
 }
+
+.holidayList {
+  margin-top: 0.7em;
+}
+.holidayListItem {
+  margin-bottom: 0.7em;
+}
